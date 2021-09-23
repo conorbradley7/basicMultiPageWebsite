@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+@viewport{width: device-width}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+==============================================================================================================
+Global selectors first
+==============================================================================================================
+*/
+html{
+  background-image: linear-gradient(#BEF3F7, #B77FEF);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+
+body{
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    margin: 3em auto;
+    border: .5em solid black;
+    background-color: #67EFB4;
+}
+
+main{
+  width: 100%;
+  background-color: #ACFCD9;
+}
+
+/*
+============================================================================================================
+Header
+============================================================================================================
+*/
+
+header{
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Francois One', sans-serif;
+    grid-area: top;
+    background-image: url('knockN.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    min-width: 300px;
+}
+
+header p{
+  text-align: center;
+  background-color: rgba(222,249,237, 0.5);
+}
+
+header h1{
+  background-color: rgba(222,249,237, 0.5);
+}
+
+
+/*
+=============================================================================================================
+Style the nav
+=============================================================================================================
+*/
+nav{
+  background-color: #63C7B2;
+  padding: 1.5em;
+  width:100%;
+}
+
+
+ nav a{
+     color: black;
+     padding: 1em 0em;
+     background-color: white;
+     border-radius: 1em;
+     padding: 1em;
+     text-decoration: none;
+}
+
+nav a:hover{
+  background-color: black;
+  color:white;
+}
+
+nav a[href='']{
+  background-color: black;
+  color:white;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+/*
+=============================================================================================================
+Sections
+=============================================================================================================
+*/
+
+section{
+  display: block;
+  margin: 2em;
+  text-align: justify;
+  max-width: 100%;
+}
+
+
+/*
+=============================================================================================================
+sally.html
+=============================================================================================================
+*/
+
+#sally_gallery{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+img{
+  transition: transform 1.5s;
+  width: 200px;
+  height: 200px;
+  border-radius: 2em;
+  margin: 2em;
+  max-width: 100%;
+}
+
+img:hover{
+  transform: scale(1.09);
+}
+
+#sally_gallery h1{
+  flex-basis: 100%;
+  text-align: center;
+}
+
+figcaption{
+  max-width: 200px;
+  margin: 0 2em 0 2em;
+  text-align: center;
+  font-size: .9em;
+  style: block;
+}
+
+/*
+=============================================================================================================
+cv.html
+=============================================================================================================
+*/
+
+address h1:first-child + p + p + p{
+  padding-bottom: 1em;
+}
+
+address{
+  text-align: center;
+}
+
+address p:first-child{
+  font-size: 1.5em;
+}
+
+h1{
+  font-size: 1.8em;
+}
+
+main h1{
+  padding-top: 1em;
+}
+
+h1 ~ h1{
+  font-size: 1.2em;
+}
+
+ p, li{
+   padding: 0.3em 0.1em;
+ }
+
+
+
+/*
+=============================================================================================================
+tables
+=============================================================================================================
+*/
+
+ table{
+   margin: 1em;
+ }
+
+ td, th{
+   padding:0.2em 0.5em;
+   text-align: center;
+ }
+
+caption{
+   font-size: 1.2em;
+   text-decoration: underline;
+   text-align: justify;
+ }
+
+/*
+================================================================================================================
+other
+================================================================================================================
+*/
+ ol{
+   margin-left: 2em;
+ }
+
+.intro{
+  text-align: center;
+}
+
+header{
+  padding: 2em;
+  font-size: 2.5em;
+}
+
+/*
+================================================================================================================
+media queries
+================================================================================================================
+*/
+
+@media screen and (min-width: 800px) {
+   body{
+       display: grid;
+       grid-template-columns: 15% 85%;
+       grid-template-rows: auto;
+       grid-template-areas: "top top"
+                            "middle-left middle-right"
+                            "bottom bottom"
+   }
+
+
+
+   header{
+     grid-area: top
+  }
+
+
+   main{
+     grid-area: middle-right;
+   }
+
+   section, footer, address{
+     padding-left: 2em;
+   }
+
+
+   nav{
+     display: flex;
+     flex-direction: column;
+     grid-area: middle-left;
+     position: fixed;
+     width: 10%;
+     margin-top: 20em;
+     border-radius: 0em 1em 1em 0em;
+     text-align: center;
+     border-right: solid 0.20em #275DAD;
+     border-bottom: solid 0.20em #275DAD;
+     border-top: solid 0.20em #275DAD;
+   }
+
+   {
+     background-color: red;
+   }
+
+   nav h1{
+     float: right;
+     color: white;
+     font-size: 1.4em;
+   }
+
+   nav li{
+     flex-basis: 80%;
+     padding: 2em 0em 2em 0em;
+     float:left;
+   }
+
+   img{
+     width: 400px;
+     height: 400px;
+   }
+
+   figcaption{
+     max-width: 400px;
+     font-size: 1.1em;
+     style: block;
+   }
+}
+
+}
+
+@media print{
+
+  @page{
+    margin: 3em;
+  }
+
+  body{
+    border-style: none;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .intro{
+    display: none;
+  }
